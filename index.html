@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width' initial scale='1' shrink-to-fit='0'>
+<meta name="description" content="The pet shop, one-stop hub for all breeds of dogs.">
+<meta name="author" content="Samuel Okediya">
+<meta name="keywords" content="pets, puppies, dogs, bulldog, german shepherd, rottWweiler, golden retriever, causcasian, dogs in Nigeria">
+
+<!--Bootstrap CSS-->
+<link rel='stylesheet' href='css/bootstrap.css' type=text/css> 
+<link href='fontawesome/css/all.min.css' rel='stylesheet' type='text/css'>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<title>SAM'S PET STORE</title>
+<style type='text/css'>
+/*internal css */
+	@font-face{
+		font-family:myfonts,sans-serif;
+		src:url('myfonts/SourceSerif4-Italic-VariableFont_opsz,wght.ttf') format('ttf');
+		src:url('myfonts/Roboto-Thin.ttf') format('ttf');
+		src:url('myfonts/SourceSerif4-VariableFont_opsz,wght.ttf') format('ttf');
+		}
+	#banner{
+		background-image: url(images/pets1.jpg);
+		height: 700px;
+		background-size: cover;
+	}
+	.sideimg{
+		box-shadow:7px 7px 7px 7px grey;
+	}
+	.shop{
+		box-shadow:4px 4px 4px 4px grey;
+	}
+	#aboutus{
+		background-image: url(images/pets3.jpg);
+	}
+	#aboutus1{
+		background-color: rgba(245,245,245,0.8);
+	}
+	#footer{
+		height: 470px;
+	}
+	#topbar, #footer, button{
+		background-color: rgb(89, 13, 34);
+	}
+	img{
+		background-color: rgb(255, 179, 193)!important;
+	}
+	p{
+		color:rgb(255, 77, 109);
+		font-family:myfonts;
+	}
+	span, button{
+		color: rgb(255, 77, 109);
+		font-family:myfonts;
+	}
+	h4, h2, h5, th, h1, h3 {
+		color: rgb(201, 24, 74);
+		font-family:myfont;
+	}
+
+</style>
+</head>
+<body>
+	<div class='container-fluid'>
+		<div class='row' id='topbar'>
+	<!--Logo and Business name-->
+			<div class='col col-md-3 ms-4 p-2'>
+				<img src='images/logo.png' width='10%' height='10px' class='img-fluid img-thumbnail' alt='logoimg'>
+				<span class='ms-md-2'>THE PET STORE</span>
+			</div>
+	<!--Social media Icons-->
+			<div class='col col-md-2 offset-6 p-2'>
+				<a href='#'><img src='icons/instagram.png' alt='instagram' class="img-fluid img-thumbnail ms-3" height='15px' width="15%"></a>
+				<a href='#'><img src='icons/facebook.png' alt='facebook' class="img-fluid img-thumbnail ms-3" height='15px' width="15%"></a>
+				<a href='#'><img src='icons/twitter.png' alt='twitter' class="img-fluid img-thumbnail ms-3" height='15px' width="15%"></a>
+			</div>
+		</div>
+	<!--Banner-->
+		<div class='row'>
+			<div class='col'>
+				<div class='col img-fluid img-thumbnail' id='banner'>
+
+					<div class='col col-md-4 offset-md-8 mt-5'>
+						<h2>YOU CAN NEVER GO WRONG ADDING A DOG TO THE STORY.</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='row mt-3'>
+	<!--About us-->
+			<div class='col col-md-3 sideimg' ><img src='images/sidepet3.jpg' class='img-fluid img-thumbnail' alt='sideimage1'></div>
+			<div class='col col-md-6' id='aboutus'>
+				<div class='col mt-3' id='aboutus1'>
+				<h4 align='center'>ABOUT US</h4>
+				<hr class='col offset-md-4' align='center' width='30%' style='color:rgb(89, 13, 34)';>
+				<p class='m-2'>
+					A team of highly dedicated dog lovers with many years experience in breeding and selecting the most suitable dogs for families. We see dogs not just as pets, but as vital loving members needed to complete families. <p class='m-2'>Therefore we thrive with the highest ethical standards of breeding, working with the best breeders from the best bloodlines, and bringing same to loving homes and good owners, with whom to build a rewarding lasting relationships.</p>
+					<p class='m-2'>Providing the best service to our customers is our utmost priority. We educate and advice where needed, especially for new dog owners, on a few tips to ensure a smooth transition of our dogs from the breeders to their new homes.</p>
+				</p>
+			</div>
+			</div>
+	<!--About us images-->
+			<div class='col col-md-3 sideimg'><img src='images/sidepet2.jpg' class='img-fluid img-thumbnail' alt='sideimage2'></div>
+		</div>
+		<div class='row'>
+			<div class='col'></div>
+		</div>
+		<div class='row'>
+	<!--Shop table-->
+			<div class='col mt-4'>
+			<table class="table">
+  				<thead>
+    			<tr align='center'>
+      				<th scope="col">NAME</th>
+      				<th scope="col">ITEM</th>
+     				<th scope="col">QUANTITY</th>
+      				<th scope="col">PRICE (₦)</th>
+      				<th scope="col">TOTAL</th>
+    			</tr>
+ 				 </thead>
+ 				 <tbody>
+    			<tr>
+      				<th scope="row">GERMAN SHEPHERD</th>
+      				<td align='center'><img src='images/german.jpg' alt='germanpix' class="img-fluid img-thumbnail shop" height='20px' width="25%"></td>
+      				<td>
+      					<select name='quantity' class='form-control' id='qty1' onchange="sumup();">
+      						<option value='0'>0</option>
+      						<option value='1'>1</option>
+      						<option value='2'>2</option>
+      						<option value='3'>3</option>
+      						<option value='4'>4</option>
+      						<option value='5'>5</option>
+      						<option value='6'>6</option>
+      						<option value='7'>7</option>
+      						<option value='8'>8</option>
+      						<option value='9'>9</option>
+      						<option value='10'>10</option>
+      					</select>
+      				</td>
+      				<td>
+      					<input class='form-control' readonly name='price' type='text' value='4000' id='price1'>
+      				</td>
+      				<td><input class='form-control' readonly name='total' type='text' value='0' id='total1'></td>
+    			</tr>
+    			<tr>
+      				<th scope="row">CAUSCASIAN SHEPHERD</th>
+      				<td align='center'><img src='images/caucasian.jpg' alt='caucasianpix' class="img-fluid img-thumbnail shop" height='20px' width="25%"></td>
+      				<td>
+      					<select name='quantity' class='form-control' id='qty2' onchange="sumup();">
+      						<option value='0'>0</option>
+      						<option value='1'>1</option>
+      						<option value='2'>2</option>
+      						<option value='3'>3</option>
+      						<option value='4'>4</option>
+      						<option value='5'>5</option>
+      						<option value='6'>6</option>
+      						<option value='7'>7</option>
+      						<option value='8'>8</option>
+      						<option value='9'>9</option>
+      						<option value='10'>10</option>
+      					</select>
+      				</td>
+      				<td>
+      					<input class='form-control' readonly name='price' type='text' value='2000' id='price2'>
+      				</td>
+      				<td><input class='form-control' readonly name='total' type='text' value='0' id='total2'></td>
+    			</tr>
+   				 <tr>
+      				<th scope="row">ROTTWEILER</th>
+      				<td align='center'><img src='images/rot.jpg' alt='rotpix' class="img-fluid img-thumbnail shop" height='20px' width="25%"></td>
+      				<td>	<select name='quantity' class='form-control' id='qty3' onchange="sumup();">
+      						<option value='0'>0</option>
+      						<option value='1'>1</option>
+      						<option value='2'>2</option>
+      						<option value='3'>3</option>
+      						<option value='4'>4</option>
+      						<option value='5'>5</option>
+      						<option value='6'>6</option>
+      						<option value='7'>7</option>
+      						<option value='8'>8</option>
+      						<option value='9'>9</option>
+      						<option value='10'>10</option>
+      					</select></td>
+      				<td><input class='form-control' readonly name='price' type='text' value='1000' id='price3'></td>
+      				<td><input class='form-control' readonly name='total' type='text' value='0' id='total3'></td>
+    			</tr>
+    			<tr>
+      				<th scope="row">GOLDEN RETRIEVER</th>
+      				<td align='center'><img src='images/golden.jpg' alt='retrieverpix' class="img-fluid img-thumbnail shop" height='20px' width="25%"></td>
+      				<td>	<select name='quantity' class='form-control' id='qty4' onchange="sumup();">
+      						<option value='0'>0</option>
+      						<option value='1'>1</option>
+      						<option value='2'>2</option>
+      						<option value='3'>3</option>
+      						<option value='4'>4</option>
+      						<option value='5'>5</option>
+      						<option value='6'>6</option>
+      						<option value='7'>7</option>
+      						<option value='8'>8</option>
+      						<option value='9'>9</option>
+      						<option value='10'>10</option>
+      					</select></td>
+      				<td><input class='form-control' readonly name='price' type='text' value='2000' id='price4'></td>
+      				<td><input class='form-control' readonly name='total' type='text' value='0' id='total4'></td>
+      				
+    			</tr>
+    			 <tr>
+      				<th scope="row">BULL DOG</th>
+      				<td align='center'><img src='images/bulldog.jpg' alt='bulldog' class="img-fluid img-thumbnail shop" height='20px' width="25%"></td>
+      				<td>	<select name='quantity' class='form-control' id='qty5' onchange="sumup();">
+      						<option value='0'>0</option>
+      						<option value='1'>1</option>
+      						<option value='2'>2</option>
+      						<option value='3'>3</option>
+      						<option value='4'>4</option>
+      						<option value='5'>5</option>
+      						<option value='6'>6</option>
+      						<option value='7'>7</option>
+      						<option value='8'>8</option>
+      						<option value='9'>9</option>
+      						<option value='10'>10</option>
+      					</select></td>
+      				<td><input class='form-control' readonly name='price' type='text' value='6000' id='price5'></td>
+      				<td><input class='form-control' readonly name='total' type='text' value='0' id='total5'></td>
+    			</tr>
+  				</tbody>
+			</table>
+	<!--Checkout button-->
+			<button type='button' class='button sm col col-md-8 offset-md-2 offset-4' onclick="checkout();"><span class='fas fa-dog' style='font-size:25px'></span><br>ENTER PRIZE DRAW</button>
+			</div>
+			<div class='row'>
+				<div class='col'>
+					<div><img src='images/defaultimg.jpg' height='10px' width='10px' id='commentimg'><span id='comment'></span></div>
+				</div>
+			</div>
+		
+		</div>
+		<div class='row'>
+	<!--Footer-->
+			<div class='col-12' id='footer'>
+				<div class='col-5 mt-2'>
+					<img src='images/footer4.jpg' alt='footerdog' class="img-fluid img-thumbnail" height='20px' width="30%">
+				</div>
+				<div class='col col-md-4 offset-4 mb-5'>
+					<div class='col'><h5 align='center'>CONTACT US</h5></div>
+					<form>	
+					<div class="mt-3">
+  					<input type="text" class="form-control" placeholder="Full Name">
+					</div>		
+					<div class="mt-3">
+  					<input type="email" class="form-control" placeholder="Email address">
+					</div>
+					<div class="mt-3">
+  					<textarea class="form-control" placeholder='Your message' rows="3"></textarea>
+  					</form>
+  		<button class='button btn-outline btn-sm mt-3 offset-5' type='submit'>Submit</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type='text/javascript' language='javascript'>
+
+	/*First function*/
+
+	function sumup(){
+
+
+		quantity1=document.getElementById('qty1').value;
+		quantity2=document.getElementById('qty2').value;
+		quantity3=document.getElementById('qty3').value;
+		quantity4=document.getElementById('qty4').value;
+		quantity5=document.getElementById('qty5').value;
+
+		price1=document.getElementById('price1').value;
+		price2=document.getElementById('price2').value;
+		price3=document.getElementById('price3').value;
+		price4=document.getElementById('price4').value;
+		price5=document.getElementById('price5').value;	
+
+		tot1=document.getElementById('total1').value=quantity1*price1;
+		tot2=document.getElementById('total2').value=quantity2*price2;
+		tot3=document.getElementById('total3').value=quantity3*price3;
+		tot4=document.getElementById('total4').value=quantity4*price4;
+		tot5=document.getElementById('total5').value=quantity5*price5;
+	}
+
+	/*Second function*/
+
+	function checkout(){
+
+	successimg="<img src='images/success.jpg' height='30px' width='30px'>";
+	tryagainimg="<img src='images/tryagain.jpg' height='30px' width='30px'>";
+	totqty= Number(quantity1)+Number(quantity2)+Number(quantity3)+Number(quantity4)+Number(quantity5);
+	totprice= Number(tot1)+Number(tot2)+Number(tot3)+Number(tot4)+Number(tot5);
+	average= totprice/totqty;
+
+	if(Number(quantity1)+Number(quantity2)+Number(quantity3)+Number(quantity4)+Number(quantity5)>=10 || Number(tot1)+Number(tot2)+Number(tot3)+Number(tot4)+Number(tot5)>=20000){
+	document.getElementById('comment').innerHTML= '<br>' +successimg+ '<b><i> CONGRATS! you are qualified for our Valentine\'s day promo. You are purchasing a total of ' +totqty+ ' items, the total amount being spent is ' +totprice+ ' Naira and an average of ' +average+ ' Naira.</i></b>';
+	}else{
+	document.getElementById('comment').innerHTML= '<br>' +tryagainimg+ '<b><i> Thank you for shopping with us. You are purchasing a total of ' +totqty+ ' item(s), the total amount being spent is ' +totprice+ ' Naira and an average of ' +average+ ' Naira. Shop more to qualify for our valentine\'s day promo.</i></b>';
+	}
+}
+	
+</script>
+</body>
+</html>
