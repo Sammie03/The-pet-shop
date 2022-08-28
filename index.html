@@ -84,6 +84,10 @@
 		text-align: center;
 	}
 
+	#comment{
+		color:black;
+	}
+
 	@media only screen and (max-width: 724px){
 		body{
 			font-size: 11px;
@@ -264,7 +268,7 @@
 		</div>
 			<div class='row'>
 				<div class='col'>
-					<div><img src='images/defaultimg.jpg' height='10px' width='10px' id='commentimg'><span id='comment'></span></div>
+					<div><img src='images/defaultimg.jpg' height='100px' width='100px' id='commentimg'><span id='comment'></span></div>
 				</div>
 			</div>
 		
@@ -324,6 +328,7 @@
 
 	successimg="<img src='images/success.jpg' height='30px' width='30px'>";
 	tryagainimg="<img src='images/tryagain.jpg' height='30px' width='30px'>";
+	successColor='green'
 	totqty= Number(quantity1)+Number(quantity2)+Number(quantity3)+Number(quantity4)+Number(quantity5);
 	totprice= Number(tot1)+Number(tot2)+Number(tot3)+Number(tot4)+Number(tot5);
 	average= totprice/totqty;
